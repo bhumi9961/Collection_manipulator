@@ -45,8 +45,9 @@ while True:
             print("No student record found!!")
         else: 
             for s in student_list:
-                print(f"\nID: {personal_info[0]} | Name: {name} | Age: {age} | Grade: {grade}")
-                print(f"DOB: {personal_info[1]}")
+                print("\nID: {} | Name: {} | Age: {} | Grade: {}".format(
+                    s["Personal"][0], s["Name"], s["Age"], s["Grade"]))
+                print("DOB: %s" % s["Personal"][1])
                 print("Subjects:", ", ".join(s["Subjects"]))
 
     elif choice == 3:
